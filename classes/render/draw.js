@@ -7,13 +7,44 @@ class Draw{
 
     draw_polygon(poly) {
 
+        poly.draw(this.context);
+
     }
 
 }
 
+class Style{
+
+    valid_style_keys = ['stroke_style', 'fill_style', 'stroke_color', 'fill_color', 'close_path'];
+    styles = new Map();
+
+    constructor(args) {
+        /*
+        * args should be a map
+        * */
+        this.args = args;
+        this.process_arguments();
+    }
+
+    process_arguments(){
+
+        for (let [key, value] of this.args) {
+            if (this.valid_style(key)) {
+                this.styles[key] = value;
+            }
+        }
+
+    }
+
+    valid_style(style_key){
+        return this.valid_style_keys.includes(style_key);
+    }
+}
+
 class Polygon {
-    constructor(position, style) {
+    constructor(position, geometry, style) {
         this.position = position; // Expects a point
+        this.geometry = geometry; // should be a list of Points
         this.style = style; // fill, stroke, clear
     }
 
@@ -24,38 +55,24 @@ class Polygon {
     get get_style() {
         return this.style;
     }
-}
 
-class Rectangle extends Polygon{
-    constructor(position, style, dimensions) {
-        super(position, style);
-        this.dimensions = dimensions;
+    get get_geometry() {
+        return this.geometry;
     }
 
-    draw(context){
-        let width = this.dimensions[0];
-        let height = this.dimensions[1];
-        let pos = this.position.position()
-        let x = pos.x;
-        let y = pos.y;
+    draw(context) {
+        context.beginPath();
 
-        switch (this.style) {
-            case 'fill':
-                context.fillRect(x,y,width, height);
-                break;
-            case 'stroke':
-                context.strokeRect(x,y,width, height);
-                break;
-            case 'clear':
-                context.clearRect(x,y,width, height);
-                break;
-            default:
-                console.log('No style specified.')
+        context.moveTo(this.position.x, this.position.y);
+        for (let point of this.geometry) {
+            context.lineTo(point.x, point.y);
         }
+
+
+
+
     }
-
 }
-
 
 
 class Point2D {
