@@ -63,6 +63,8 @@ class Polygon {
     draw(context) {
         context.beginPath();
 
+
+
         context.moveTo(this.position.x, this.position.y);
         for (let point of this.geometry) {
             context.lineTo(point.x, point.y);
