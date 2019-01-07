@@ -13,8 +13,20 @@
             var canvas = document.getElementById('testCanvas');
             var graphicalContext = canvas.getContext('2d');
 
-            let grid_width = 8;
-            let grid_height = 8;
+            let grid_width = 14; // 448 px
+            let grid_height = 16; // 512 px
+
+            let tile_size = 32;
+
+            for (let i = 0; i < grid_height; i++) {
+                let row = i * tile_size;
+                for (let j = 0; j < grid_width; j++) {
+                    let col = j * tile_size;
+                    graphicalContext.strokeRect(row, col, tile_size, tile_size);
+                }
+            }
+
+            /*
             let geometry = [
             new Point2D(100, 50),
             new Point2D(100, 75),
@@ -32,6 +44,9 @@
             graphicalContext.closePath();
 
             graphicalContext.stroke();
+            */
+
+
 
 
 
