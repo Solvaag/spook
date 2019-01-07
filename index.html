@@ -5,20 +5,44 @@
     <title>Goof Starter</title>
     <script type="text/javascript" src="classes/render/draw.js"></script>
     <script>
-        var canvas = document.getElementById('testCanvas');
-        var graphicalContext = canvas.getContext('2d');
 
-        let grid_width = 8;
-        let grid_height = 8;
+        function main () {
+
+            console.log("I happened!")
+
+            var canvas = document.getElementById('testCanvas');
+            var graphicalContext = canvas.getContext('2d');
+
+            let grid_width = 8;
+            let grid_height = 8;
+            let geometry = [
+            new Point2D(100, 50),
+            new Point2D(100, 75),
+            new Point2D(75, 75)];
+
+            let pos = new Point2D(75,50);
+
+            let poly = new Polygon(pos, geometry);
+
+
+            graphicalContext.beginPath();
+
+            poly.draw(graphicalContext);
+
+            graphicalContext.closePath();
+
+            graphicalContext.stroke();
 
 
 
+
+        };
 
     </script>
 </head>
-<body>
+<body onload="main()">
     <h1>Doof Doof</h1>
-    <canvas  width = "512" height="448" id="testCanvas" style="border:black 1px solid;">
+    <canvas  width = "512" height="448" id="testCanvas"  style="border:black 1px solid;">
         Your browser does not support HTML5 Canvas. Please shift to another browser.
     </canvas>
 </body>

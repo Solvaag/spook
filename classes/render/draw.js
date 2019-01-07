@@ -13,15 +13,17 @@ class Draw{
 
 }
 
+/*
 class Style{
 
     valid_style_keys = ['stroke_style', 'fill_style', 'stroke_color', 'fill_color', 'close_path'];
+
     styles = new Map();
 
     constructor(args) {
         /*
         * args should be a map
-        * */
+        * */ /*
         this.args = args;
         this.process_arguments();
     }
@@ -39,39 +41,34 @@ class Style{
     valid_style(style_key){
         return this.valid_style_keys.includes(style_key);
     }
-}
+} */
+
 
 class Polygon {
-    constructor(position, geometry, style) {
+
+
+    constructor(position, geometry) {
         this.position = position; // Expects a point
         this.geometry = geometry; // should be a list of Points
-        this.style = style; // fill, stroke, clear
     }
 
     get get_position() {
         return this.position;
     }
 
-    get get_style() {
-        return this.style;
-    }
 
     get get_geometry() {
         return this.geometry;
     }
 
     draw(context) {
-        context.beginPath();
-
 
 
         context.moveTo(this.position.x, this.position.y);
+
         for (let point of this.geometry) {
             context.lineTo(point.x, point.y);
         }
-
-
-
 
     }
 }
