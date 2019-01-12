@@ -15,14 +15,20 @@ class ImageResource {
         this.image = new Image();
         this.image.onload = this.on_load();
         this.image.src = this.path;
+    }
 
+    confirm_load() {
+        if (this.image.complete) {
+            this.load_status = 0;
+            return this.load_status;
+        } else {
+            return this.load_status;
+        }
     }
 
     on_load() {
         return function(){
-            let self = this;
-            self.load_status = 0;
-            self.msg_target.set(this.path, 0);
+            console.log(this);
         };
     }
 
