@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset = utf-8"> 
+		<title>First Prototype HTML5 game</title>
+		<script type="text/javascript" src="JS/spaceship.js"></script>
+		<script type="text/javascript" src="JS/bullet.js"></script>
+		<script type="text/javascript" src="JS/asteroid.js"></script>
+		<script type="text/javascript">
+		
+		// stuff		
+
+		var canvas = null; 
+		var graphicalContext = null;
+
+		var framerate = 1000 / 30;
+
+		var asset = "background.jpg";
+
+		var image = null;
+
+		var asteroidImage = null;
+		var asteroidAsset = "one_asteroid.png";
+
+		var backgroundImage = null;
+
+		var mouseEvent = null;
+
+		// canvas mid position
+		var centerX = null; 
+		var centerY = null; 
+
+		var cameraObject = {cameraX: 0,
+							cameraY: 0,
+							getScreenPosition: function(worldCoordinates) {
+
+								var dx = worldCoordinates.x - this.cameraX;
+								var dy = worldCoordinates.y - this.cameraY;
+
+								return {x: dx, y: dy};
+
+							},
+
+							getCenterOfScreen: function(entity) {
+
+								var center = entity.getCenter(); // make this a general function in all entities
+
+								var cx = centerX - center.x;
+								var cy = centerY - center.y;
+								return {x: cx, y: cy};
+
+							}
+						};
+
+		var backgroundObject = {
+			worldCoordinates: {x:0,y:0},
+			res: backgroundImage,
+			isInitialized: false
+
+		};
+
+
+
+
+		var bound = {boundX: 80,
+					 boundY: 60,
+					 width: 480,
+					 height: 360};
+
+		var listOfBullets = [];
+		var listOfAsteroids = [];
+
+		var intersections = {
+
+			test: false,
+
+			hit: {}
+
+
+		}
+
+
+		var onImageLoad = function () {
+				console.log("Image loaded!");
+		};
+
+
+		function pageLoaded() {
+				
+
+				//Load in canvas
+				canvas = document.getElementById('testCanvas');
+				//Load in grapics context
+				graphicalContext = canvas.getContext('2d');
+
+				canvas.addEventListener('mousemove', function(evt) {
+					mouseEvent = mouseUpdateInCanvas(evt);
+				}, false);
+
+				canvas.addEventListener('click', processClick, false);
+
+				window.addEventListener('keydown', this.keyPressed, false)
+
+				//LOAD IN BACKGROUND
+				image = new Image();
+				image.onload = onImageLoad;
+				image.src = asset;
+
+				backgroundObject.res = image; 
+				backgroundObject.isInitialized = true;
+
+				asteroidImage = new Image();
+				asteroidImage.onload = onImageLoad;
+				asteroidImage.src = asteroidAsset;
+
+				centerX = canvas.width / 2;
+				centerY = canvas.height / 2; 
+
+				var center = spaceship.getCenter();
+
+				spaceship.posX = centerX - center.x;
+				spaceship.posY = centerY - center.y;
+				cameraObject.cameraX = spaceship.posX;
+				cameraObject.cameraY = spaceship.posY;
+
+				console.log(spaceship.getCenter());
+
+
+				graphicalContext.save();
+				setInterval(animate, framerate);
+				setInterval(console.log(spaceship), 3000);
+
+
+
+
+		}
+
+		function animate() {
+			graphicalContext.clearRect(0,0, canvas.width, canvas.height);
+
+
+			if (backgroundObject.isInitialized) {
+
+				var screenPosition = cameraObject.getScreenPosition(backgroundObject.worldCoordinates);
+
+				graphicalContext.drawImage(backgroundObject.res, screenPosition.x, screenPosition.y);
+			}
+			// graphicalContext.drawImage(image, -cameraObject.cameraX, -cameraObject.cameraY); // draw background
+
+			graphicalContext.strokeStyle = "white";
+
+			if (true) { /* this should actually check if the ship has hit the bounds */
+				spaceship.shipHasHitBound();
+				var shipVector = spaceship.getVector();
+				cameraObject.cameraX += shipVector.x;
+				cameraObject.cameraY += shipVector.y;
+			}
+
+			if (mouseEvent !== null) {
+				graphicalContext.strokeText("Mouse Pos: " + mouseEvent.clientX + ":" + mouseEvent.clientY, 10, 10);
+				graphicalContext.strokeText("Ship Vector: " + spaceship.vector2.x + ":" + spaceship.vector2.y, 10, 20);
+				graphicalContext.strokeText("Bullets in game: " + listOfBullets.length, 10, 30);
+
+
+				if (listOfAsteroids.length > 0) {
+					var aV = listOfAsteroids[0].vector;
+					graphicalContext.strokeText("Asteroid 1 vector: " + aV.x + ":" + aV.y, 10, 40);
+				}
+
+			}
+
+			if (listOfBullets.length > 0) {
+				renderBullets();
+			}
+
+			if (listOfAsteroids.length > 0) {
+				renderAsteroids();
+			}
+
+			shipRotation();
+
+			var centerPosition = cameraObject.getCenterOfScreen(spaceship);
+
+			graphicalContext.strokeRect(centerPosition.x - 16, centerPosition.y - 16, spaceship.dimensions.width, spaceship.dimensions.height);
+
+
+			
+			graphicalContext.resetTransform();
+			graphicalContext.restore();
+
+
+
+			spaceship.update({mouseEvent: mouseEvent});
+
+
+		}
+
+		function shipRotation() {
+
+			graphicalContext.translate(centerX, centerY);
+			graphicalContext.rotate(spaceship.getRadians());
+			graphicalContext.translate(0, 0);
+
+
+		}
+
+		function mouseUpdateInCanvas(evt) {
+			var rect = canvas.getBoundingClientRect();
+
+			return {
+				clientX: evt.clientX - rect.left,
+				clientY: evt.clientY - rect.top
+			}
+
+		}
+
+		function keyPressed(event) {
+			if (event.keyCode === 119 || event.keyCode === 87 ) {
+				spaceship.accelerate();
+			} else if (event.keyCode === 120 || event.keyCode === 88) {
+				spaceship.fullStop();
+			} else if (event.keyCode === 113 || event.keyCode === 81) {
+				spawnAsteroids();
+			}
+		}
+		
+		function updateGraphicalContext() {
+			graphicalContext.translate(cameraObject.cameraX, cameraObject.cameraY);
+		}
+
+		function checkIfShipIsOutsideBounds() {
+
+			if ((spaceship.posX >= bound.boundX + bound.width)
+			 || (spaceship.posX <= bound.boundX)
+			 || (spaceship.posY >= bound.boundY + bound.height)
+			 || (spaceship.posY <= bound.boundY)) {
+
+				return true;
+
+
+			}
+
+
+		}
+
+		function spawnBullet() {
+
+			var pointOfOrigin = spaceship.getCenter();
+			var radians = spaceship.radians; 
+
+			var hypotenuse = 3;
+
+			var vectorX = Math.cos(radians) * hypotenuse;
+			var vectorY = Math.sin(radians) * hypotenuse;
+
+			var vector2 = {x: vectorX, y: vectorY};
+
+			var bullet = new Bullet(vector2, pointOfOrigin);
+
+			return bullet; 
+		}
+
+		function processClick(evt) {
+
+			var bullet = spawnBullet();
+
+			listOfBullets.push(bullet);
+
+		}
+
+		function renderBullets() {
+
+			for (var x = 0; x < listOfBullets.length; x++) {
+
+				var bullet = listOfBullets[x];
+
+				if (bullet.lifetime <= 0) {
+
+					listOfBullets.splice(x, 1); 
+					continue;
+				}
+
+				intersections = intersectCheck(bullet);
+
+				if (intersections.test) {
+
+					// KILL AN ASTEROID 
+
+					var index = listOfAsteroids.indexOf(intersections.hit);
+
+					listOfAsteroids.splice(index, 1);
+
+					intersections.test = false;
+
+
+					listOfBullets.splice(x, 1); 
+					continue;
+
+				}
+
+				bullet.update(); // maybe put this at the end of the loop block
+				
+				var bulletScreenPosition = cameraObject.getScreenPosition(bullet.currentPos);
+				
+
+
+				graphicalContext.fillStyle = "red";
+				graphicalContext.fillRect(bulletScreenPosition.x, bulletScreenPosition.y, 5, 5);
+
+
+			} 
+			graphicalContext.fillStyle = "white";
+		}
+
+		function spawnAsteroids() {
+			console.log("Asteroids spawned!");
+
+			var xPositions = [80, 560, 80, 560]; 
+			var yPositions = [80, 400, 400, 80];
+
+			for (var i = 0; i < 4; i++) {
+
+
+				var asteroid = new Asteroid();
+
+				asteroid.position.x = xPositions[i];
+				asteroid.position.y = yPositions[i];
+
+				listOfAsteroids.push(asteroid);
+
+			}
+
+			console.log(listOfAsteroids.length);
+
+
+		}
+
+		function renderAsteroids() {
+
+			for (var i = 0; i < listOfAsteroids.length; i++) {
+
+				var asteroid = listOfAsteroids[i];
+
+				asteroid.update();
+
+				asteroid.position.x -= spaceship.vector2.x;
+				asteroid.position.y -= spaceship.vector2.y;
+
+				var drawX = asteroid.position.x;
+				var drawY = asteroid.position.y;
+
+				graphicalContext.drawImage(asteroidImage, drawX, drawY);
+
+			}
+		}
+
+
+		function intersectCheck(bullet) {
+
+			if (listOfAsteroids.length > 0) {
+
+				for (var i = 0; i < listOfAsteroids.length; i++) {
+
+					var asteroid = listOfAsteroids[i];
+
+						if (bullet.currentPos.x >= asteroid.position.x && bullet.currentPos.x <= (asteroid.position.x + asteroid.width ) && 
+						 bullet.currentPos.y >= asteroid.position.y &&
+						 bullet.currentPos.y <= (asteroid.position.y + asteroid.height )
+						 ) {
+							// the asteroid has been hit
+
+							intersections.test = true;
+							intersections.hit = asteroid;
+							console.log("Hit asteroid");
+						}
+
+
+				}
+
+
+			}
+
+
+
+			return intersections;
+
+
+		}
+
+		</script>
+	</head>
+	<body onload = "pageLoaded()">
+		<canvas  width = "640" height="480" id="testCanvas" style="border:black 1px solid;">
+			Your browser does not support HTML5 Canvas. Please shift to another browser. 
+		</canvas>
+	</body>
+</html>

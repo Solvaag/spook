@@ -1,0 +1,772 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"aster",
+				"asteroid"
+			],
+			[
+				"inters",
+				"intersections"
+			],
+			[
+				"inter",
+				"intersections"
+			],
+			[
+				"intersect",
+				"intersectCheck"
+			],
+			[
+				"vect",
+				"vector"
+			],
+			[
+				"vec",
+				"vector2"
+			],
+			[
+				"dra",
+				"drawY"
+			],
+			[
+				"draw",
+				"drawX"
+			],
+			[
+				"ast",
+				"asteroid"
+			],
+			[
+				"list",
+				"listOfAsteroids"
+			],
+			[
+				"on",
+				"onload"
+			],
+			[
+				"po",
+				"currentPos"
+			],
+			[
+				"vector",
+				"vectorY"
+			],
+			[
+				"vecto",
+				"vectorX"
+			],
+			[
+				"get",
+				"getRadians"
+			],
+			[
+				"getShi",
+				"getShipDirection"
+			],
+			[
+				"getShip",
+				"getShipCompassDirection"
+			],
+			[
+				"cam",
+				"cameraY"
+			],
+			[
+				"ca",
+				"cameraX"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"pos",
+				"posX"
+			],
+			[
+				"bound",
+				"boundY"
+			],
+			[
+				"bun",
+				"boundX"
+			],
+			[
+				"came",
+				"cameraPosition"
+			],
+			[
+				"getc",
+				"getCenter"
+			],
+			[
+				"mouse",
+				"mouseEvent"
+			],
+			[
+				"playe",
+				"playerInput"
+			],
+			[
+				"getin",
+				"getRadiansFromMouse"
+			],
+			[
+				"new",
+				"newRadians"
+			],
+			[
+				"int",
+				"inputRadians"
+			],
+			[
+				"con",
+				"convertRadiansToDegrees"
+			],
+			[
+				"v",
+				"vector2"
+			],
+			[
+				"player",
+				"playerTurnRate"
+			],
+			[
+				"in",
+				"inputRadians"
+			],
+			[
+				"degre",
+				"degreeDifference"
+			],
+			[
+				"deg",
+				"degreeDifference"
+			],
+			[
+				"turn",
+				"turnImpulse"
+			],
+			[
+				"ship",
+				"shipFacing"
+			],
+			[
+				"up",
+				"updateTurning"
+			],
+			[
+				"ra",
+				"radians"
+			],
+			[
+				"tu",
+				"turningRate"
+			],
+			[
+				"rad",
+				"getRadiansFromMouse"
+			],
+			[
+				"de",
+				"decelerate"
+			],
+			[
+				"key",
+				"keyCode"
+			],
+			[
+				"sh",
+				"shipFacing"
+			],
+			[
+				"ci",
+				"converRadiansToDegrees"
+			],
+			[
+				"g",
+				"graphicalContext"
+			],
+			[
+				"game",
+				"gameLoop"
+			],
+			[
+				"image",
+				"imageHeight"
+			],
+			[
+				"imge",
+				"imageHeight"
+			],
+			[
+				"loa",
+				"loadedImages"
+			],
+			[
+				"lo",
+				"loadedImages"
+			],
+			[
+				"ac",
+				"actualRadians"
+			],
+			[
+				"Lin",
+				"lineTo"
+			],
+			[
+				"grap",
+				"graphicalContext"
+			],
+			[
+				"mysql",
+				"mysqlTarget"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"mys",
+				"mysqlTarget"
+			],
+			[
+				"conn",
+				"connection"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"boder-co",
+				"border-color"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"SE",
+				"SECTION	Tag"
+			],
+			[
+				"sec",
+				"SECTION	Tag"
+			],
+			[
+				"find",
+				"findTeacher"
+			],
+			[
+				"X",
+				"XCandidates"
+			],
+			[
+				"Candi",
+				"Candidate"
+			],
+			[
+				"write",
+				"writeSolution"
+			],
+			[
+				"KS",
+				"KS"
+			],
+			[
+				"display",
+				"displayEvent"
+			],
+			[
+				"is",
+				"isNumber"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"w",
+				"w"
+			],
+			[
+				"hex",
+				"hexRadius"
+			],
+			[
+				"canvas",
+				"canvasHeight"
+			],
+			[
+				"boar",
+				"boardHeight"
+			],
+			[
+				"board",
+				"boardWidth"
+			],
+			[
+				"T",
+				"Timeantall"
+			],
+			[
+				"IN",
+				"INFO100"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"l",
+				"li	Tag"
+			],
+			[
+				"php",
+				"phpstr"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"se",
+				"section	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 7475,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "JS/asteroid.js",
+			"settings":
+			{
+				"buffer_size": 230,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "JS/bullet.js",
+			"settings":
+			{
+				"buffer_size": 291,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "JS/spaceship.js",
+			"settings":
+			{
+				"buffer_size": 3362,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: pi ",
+				"Package Control: Create Package File"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Example John/Documents/Coding/Solvaag Media/First Prototype/JS/util.js",
+		"/C/Users/Example John/Documents/Coding/Solvaag Media/First Prototype/pexels-photo-25316.jpg",
+		"/C/Users/Example John/Documents/Coding/Solvaag Media/First Prototype/b48bfa0acee4025fd07b70abb1d96d67.png",
+		"/C/Users/Example John/OneDrive/Programming Books/Pro HTML 5 games/pro_html5_games/9781430247104_ch02-code/9781430212345_ch02-code/js/game.js",
+		"/C/UiB/INFO331/ATT/views/index.jade",
+		"/C/UiB/INFO331/ATT/views/login.jade",
+		"/C/UiB/INFO331/ATT/views/layout.jade",
+		"/C/UiB/INFO331/ATT/routes/index.js",
+		"/C/UiB/INFO331/ATT/public/javascript/mysql_functions.js",
+		"/C/UiB/INFO331/ATT/views/mysql_test.jade",
+		"/C/Users/Example John/Documents/Coding/UiBInfo233/Oblig 2 rettinger/Oblig2/issues.xml",
+		"/C/Users/Example John/OneDrive/Universitets studier/Dasp109/Second Assignment/106.html",
+		"/C/Users/Example John/Documents/Coding/datamixer/old_issues.xml",
+		"/C/Users/Example John/Documents/Coding/UiBInfo233/V2016.Oblig2.losning/old_issues.xml",
+		"/C/Users/Example John/workspace/DaspAssignment3/human_rights.xml",
+		"/C/Users/Example John/Documents/Coding/INFO/Stuffings/src/HelloWorld.java",
+		"/C/Users/Example John/Documents/Coding/INFO/no.uib.skl024.INFO216.V2015.LabU7/src/no/uib/skl024/INFO216/V2015/LabU7/Main/XMLResourceHarvester.java",
+		"/C/Users/Example John/OneDrive/UiB Jobb/Info233 und/ISSUES.xml",
+		"/C/Users/Example John/Documents/Coding/DASP109/test.html",
+		"/C/Users/Example John/Documents/Coding/INFO/no.uib.skl024.INFO216.V2015.LabU7/src/no/uib/skl024/INFO216/V2015/LabU7/Main/XMLImporter.java",
+		"/C/Users/Example John/Documents/Coding/INFO/no.uib.skl024.INFO216.V2015.Generic/src/no/uib/skl024/INFO216/V2015/Generic/html/WebReader.java",
+		"/C/Users/Example John/Downloads/INFO116-Ontology-SPARQL.xml",
+		"/C/Users/Example John/Documents/Universitets studier/dicks.owl",
+		"/C/Users/Example John/Documents/info232logikkprogrammering_oblig1/oblig2test2.pl",
+		"/C/Users/Example John/OneDrive/Universitets studier/sparql_data.ttl",
+		"/C/Users/Example John/Downloads/WIt2.owl",
+		"/C/Users/Example John/OneDrive/Documents/Workspace/MondayBlues/(2) Vemund F Jensen - Messages.html",
+		"/C/Users/Example John/Downloads/Moral Judgments as Part of What Ethics Must ShowRDFa.html",
+		"/C/Users/Example John/OneDrive/Universitets studier/Info116 undervisning/Ingvilds_jsonld.js",
+		"/C/Users/Example John/Documents/Coding/JavaScript stuff/Express/realtime-multiplayer-in-html5-master/index.html",
+		"/C/Users/Example John/OneDrive/Universitets studier/Info282/oblig2.pl",
+		"/C/Users/Example John/OneDrive/Universitets studier/Info282/oppg7-2.txt",
+		"/C/Users/Example John/OneDrive/Universitets studier/Info232/Labarbeid/lab232u40.pl",
+		"/C/Users/Example John/OneDrive/Universitets studier/Info232/Labarbeid/lab232u37.pl",
+		"/C/Users/Example John/Documents/Coding/JavaScript stuff/Express/test.js",
+		"/C/Users/Example John/Documents/Coding/JavaScript stuff/Express/realtime-multiplayer-in-html5-master/game.server.js",
+		"/C/Users/Example John/Documents/Coding/JavaScript stuff/Express/realtime-multiplayer-in-html5-master/client.js",
+		"/C/Users/Example John/Documents/Universitets studier/Info216/Gruppearbeid/info216group/script.js",
+		"/C/Users/Example John/Documents/Coding/INFO/no.uib.skl024.INFO216.V2015.ProsjektArbeid/script.js",
+		"/C/Users/Example John/Documents/Coding/JavaScript stuff/Express/index.html",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_base_oblig3_v15_info233_uib.zip/Battleships/src/no/uib/abc123/info233/v15/oblig3/gui/GameWindow.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 3 bygging/Ob3 lfs/Player.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_Oblig_4_makl012_tca005.zip/Oblig 4 makl012_tca005/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_kkr010_oblig4.zip/kkr010_oblig4/Tactic.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_esj002_puz001_oblig4 (1).zip/oblig3_løsningsforslag/Player.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_gst010_nmu001_oblig4-2.zip/oblig3_l++sningsforslag/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_wic003_oblig5.zip/wic003_oblig5/Log.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_wic003_oblig5.zip/wic003_oblig5/GUI.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_wic003_oblig5.zip/wic003_oblig5/Game.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_kkr010_oblig4.zip/kkr010_oblig4/Game.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_esj002_puz001_oblig4 (1).zip/oblig3_løsningsforslag/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_Oblig_4_makl012_tca005.zip/Oblig 4 makl012_tca005/Character.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_Oblig_4_makl012_tca005.zip/Oblig 4 makl012_tca005/Player.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_esj002_puz001_oblig4 (1).zip/oblig3_løsningsforslag/Character.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_yux004_oblig3.zip/oblig3/Player.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_tny034_Oblig3.zip/tny034_Oblig3/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_cnu002_oblig3.zip/cnu002_oblig3/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_oblig3_eni006.zip/oblig3_eni006/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_rmy002_oblig3.zip/rmy002_oblig3/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_dmr078_-_Oblig_3.zip/dmr078 - Oblig 3/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_emi003_info132_oblig3.zip/info132.oblig3/src/fieldOfHonor/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_ama082_Oblig_3.zip/ama082_Oblig_3/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_klo048_oblig3-2.zip/klo048_oblig3/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_yux004_oblig3.zip/oblig3/Opponent.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_yux004_oblig3.zip/oblig3/FieldsOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_puz001_Oblig3b.zip/puz001_Oblig3b/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_Oblig_3_-_aes002_and_gle002.zip/Oblig 3 - aes002 and gle002/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_Oblig3_Cho018.zip/Oblig3_Cho018/FieldOfHonor.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_yux004_oblig3.zip/oblig3/Game.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_yux004_oblig3.zip/oblig3/PlayerTest.java",
+		"/C/Users/Example John/Documents/Coding/INFO/net.solvaag.celaut.project_a/src/net/solvaag/celaut/project_a/launchers/Sandbox.java",
+		"/C/Users/Example John/Documents/Coding/INFO/no.uib.skl024.INFO216.V2015.ProsjektArbeid/HTML Resources/sketch.js",
+		"/C/Users/Example John/Documents/Coding/plus/Den bitte lille slåsskjempen - Dagbladet Pluss.html",
+		"/C/Users/Example John/Documents/Coding/plus/Den bitte lille slåsskjempen - Dagbladet Pluss_files/4f62822df925b31540000000.js",
+		"/C/Users/Example John/Documents/Coding/plus/Den bitte lille slåsskjempen - Dagbladet Pluss_files/1041.js",
+		"/C/Users/Example John/Documents/My Games/Foil/Foil.java",
+		"/C/Users/Example John/Documents/Coding/buttbuckets/bodytest.html",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 2 retting/jin001_oblig2/src/Player.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 2 retting/jin001_oblig2/src/Game.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 2 retting/jin001_oblig2/src/Item.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 2 retting/Item.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 2 retting/Player.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 2 retting/ama082_oblig 2/Player.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 2 retting/ama082_oblig 2/Game.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 2 retting/ama082_oblig 2/Item.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 2 retting/ama082_oblig 2/InputCheck.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_emi003_oblig2.zip/info132.oblig2/src/main/Game.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_emi003_oblig2.zip/info132.oblig2/src/item/Item.java",
+		"/C/Users/Example John/Documents/Coding/INFO/no.uib.skl024.INFO216.V2015.ProsjektArbeid/ontology.owl",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_pto003_oblig2.zip/Oblig2/Player.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 2 retting/xit004_oblig2/Game.java",
+		"/F/Third Torrentara/Coding/Coding/main.js",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_xit004_oblig2.zip/xit004_oblig2/Player.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_emi003_oblig2.zip/info132.oblig2/src/player/Player.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_emi003_oblig2.zip/info132.oblig2/src/main/ToolBox.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_xit004_oblig2.zip/xit004_oblig2/Item.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_xit004_oblig2.zip/xit004_oblig2/Tools.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_pto003_oblig2.zip/Oblig2/Item.java",
+		"/F/Third Torrentara/Coding/js/xcom/early_proto.html",
+		"/F/Third Torrentara/Coding/js/xcom/source.js",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 1 retting/Oblig1/Main.java",
+		"/C/Users/Example John/Documents/Coding/hexgame/triplanetary/sketch.psuedo",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_ale014.zip/Oblig 1 2015/Player.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_fag004.zip/RPG rettelse/Player.java",
+		"/C/Users/Example John/Documents/Coding/INFO/no.uib.skl024.INFO233.V2015.Oblig2/json.html",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_JSON-java-master.zip/JSON-java-master/JSONObject.java",
+		"/C/Users/Example John/Documents/Coding/INFO/no.uib.skl024.INFO233.V2015.Oblig2/json-pretty-printer.php.html",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_Oblig_1.zip/Oblig 1/Player.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_RPG_(WoW,_WoD).zip/RPG (WoW, WoD)/Player.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_PlayerEGENRETTING.zip/PlayerEGENRETTING/Player.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_info233_oblig2_abc123.zip/Info233Oblig2_abc123/src/no/uib/abc123/info233/v15/oblig2/io/ParserInterface.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_commons-io-2.4-bin.zip/commons-io-2.4/docs/index.html",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 1 retting/xit004/oblig1/Main.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info132 undervisning/Oblig 1 retting/xit004/oblig1/Player.java",
+		"/C/Program Files (x86)/Unity/Editor/Data/Documentation/html/en/Manual/script-Text.html",
+		"//hallingskeid.uib.no/skl024/Coding/proto.js",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_info233_oblig1_skl024.zip/no.uib.skl024.INFO233.V2015.Oblig1/src/no/uib/skl024/INFO233/V2015/Oblig1/IO/SoundHandler.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_info233_oblig2_abc123.zip/Info233Oblig2_abc123/src/no/uib/abc123/info233/v15/oblig2/models/Activity.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_info233_oblig2_abc123.zip/Info233Oblig2_abc123/src/no/uib/abc123/info233/v15/oblig2/models/ActivityInterface.java",
+		"/C/Program Files (x86)/Unity/Editor/Data/Documentation/html/en/Manual/class-SphereCollider.html",
+		"/C/Users/Example John/AppData/Local/Temp/Temp1_finnkuusisto-TinySound-v1.1.1-0-gaebc265.zip/finnkuusisto-TinySound-aebc265/example/TinySoundExample.java",
+		"/C/Users/Example John/Documents/Coding/hexgame/triplanetary/functions.js",
+		"/C/Users/Example John/Documents/Coding/eclipse/notice.html",
+		"/C/Users/Example John/Documents/Coding/Plugin/proto.js",
+		"/C/Users/Example John/AppData/Local/Temp/Temp2_oving7.zip/oving7/Database.java",
+		"/C/Users/Example John/AppData/Local/Temp/Temp2_oving7.zip/oving7/Begivenhet.java",
+		"/C/Users/Example John/Documents/Universitets studier/Info116/cindy/Cindy-owl.owl",
+		"/C/Users/Example John/Documents/Universitets studier/Info116/SPARKS"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"camera",
+			"inputRadians",
+			"mouseAngle",
+			"console",
+			"!\");\n",
+			");\n",
+			"upperinitial",
+			"\"/>\n",
+			"link",
+			"whisky",
+			"cognac",
+			"address",
+			"hus",
+			"bor",
+			"akamaihd",
+			"img",
+			"‘",
+			"’",
+			"‘Probability’",
+			"',",
+			"’",
+			"setType",
+			"totalWeight",
+			"nl",
+			"lineSeparator",
+			"lineseparator",
+			"set",
+			"setType"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 7475,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4907,
+								4907
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5703.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "JS/asteroid.js",
+					"settings":
+					{
+						"buffer_size": 230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								116,
+								114
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "JS/bullet.js",
+					"settings":
+					{
+						"buffer_size": 291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3,
+								3
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "JS/spaceship.js",
+					"settings":
+					{
+						"buffer_size": 3362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1679,
+								1679
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2736.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
