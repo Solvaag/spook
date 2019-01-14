@@ -37,34 +37,19 @@
 
             console.log(board_map);
 
-            for (let index = 0; index < 255; index++) {
-
-                if (board_map.has(index)) {
-
-                    let squares = board_map.get(index);
-
-                    for (let square of squares) {
-
-                        let pos = square.make_position(tile_size);
-                        graphicalContext.strokeStyle = square.color;
-                        graphicalContext.strokeRect(pos.x, pos.y, tile_size, tile_size);
-
-                    }
-
-                }
-            }
-
             // res/tile.bmp
             let loader = new Map();
 
-            let sand_tile_path = 'res/tile.bmp';
+            let sand_tile_path = 'https://i.imgur.com/i5sW9TX.png';
 
             let tile = new ImageResource(sand_tile_path, loader);
 
             let all_done = false;
             let resource_list = [tile];
 
-            while (!all_done) {
+            let kill_switch = 60000;
+
+            while (!all_done && (kill_switch > 0)) {
                 let confirm_list = [];
                 for (let res of resource_list) {
                     confirm_list.push(res.confirm_load());
@@ -76,16 +61,39 @@
                 if (check === 0) {
                     all_done = true;
                 } else {
-                    console.log("Nope!")
+                    console.log("Nope!");
+                    kill_switch--;
                 }
             }
-
 
             console.log(tile.load_status);
 
             console.log("Stuff status " + loader.get(sand_tile_path));
 
             console.log("Status: " + tile.confirm_load());
+
+            for (let index = 0; index < 255; index++) {
+
+                if (board_map.has(index)) {
+
+                    let squares = board_map.get(index);
+
+                    for (let square of squares) {
+
+                        let pos = square.make_position(tile_size);
+                        graphicalContext.drawImage(tile.image, pos.x, pos.y, tile_size, tile_size);
+                        // graphicalContext.strokeStyle = square.color;
+                        // graphicalContext.strokeRect(pos.x, pos.y, tile_size, tile_size);
+
+                    }
+
+                }
+            }
+
+
+
+
+
 
 
 
