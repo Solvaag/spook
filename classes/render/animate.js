@@ -6,7 +6,6 @@ class Animator {
         this.graphical_context = graphical_context;
         this.set_interval = set_interval;
         this.framerate = framerate;
-        this.
     }
 
     animate() {
@@ -28,3 +27,4 @@ class Animator {
     }
 
 }
+

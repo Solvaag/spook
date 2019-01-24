@@ -38,102 +38,49 @@
             console.log(board_map);
 
             // res/tile.bmp
-            let loader = new Map();
+            // let loader = new Map();
 
             let sand_tile_path = 'https://i.imgur.com/i5sW9TX.png';
+            let doof = "lol";
 
-            let tile = new ImageResource(sand_tile_path, loader);
+            const loader = new ImageManager(doof);
+
+            loader.onload = function() {
+
+                // console.log("Stuff status " + loader.get(sand_tile_path));
+
+                for (let index = 0; index < 255; index++) {
+
+                    if (board_map.has(index)) {
+
+                        let squares = board_map.get(index);
+
+                        for (let square of squares) {
+
+                            let pos = square.make_position(tile_size);
+                            graphicalContext.drawImage(tile, pos.x, pos.y, tile_size, tile_size);
+
+                        }
+
+                    }
+                }
+            };
+
+            let callback = function(){
+                loader.item_loaded();
+            };
+
+            loader.load_image("tile", sand_tile_path, callback);
+
+            console.log(loader.all_done());
+            console.log(loader.loaded_count);
+            console.log(loader.total_count);
+
+            let tile = loader.images.get("tile");
 
             let all_done = false;
             let resource_list = [tile];
-
-            let kill_switch = 60000;
-
-            while (!all_done && (kill_switch > 0)) {
-                let confirm_list = [];
-                for (let res of resource_list) {
-                    confirm_list.push(res.confirm_load());
-                }
-                let check = 0;
-                for (let point of confirm_list) {
-                    check += point;
-                }
-                if (check === 0) {
-                    all_done = true;
-                } else {
-                    console.log("Nope!");
-                    kill_switch--;
-                }
-            }
-
-            console.log(tile.load_status);
-
-            console.log("Stuff status " + loader.get(sand_tile_path));
-
-            console.log("Status: " + tile.confirm_load());
-
-            for (let index = 0; index < 255; index++) {
-
-                if (board_map.has(index)) {
-
-                    let squares = board_map.get(index);
-
-                    for (let square of squares) {
-
-                        let pos = square.make_position(tile_size);
-                        graphicalContext.drawImage(tile.image, pos.x, pos.y, tile_size, tile_size);
-                        // graphicalContext.strokeStyle = square.color;
-                        // graphicalContext.strokeRect(pos.x, pos.y, tile_size, tile_size);
-
-                    }
-
-                }
-            }
-
-
-
-
-
-
-
-
-
-            // for (let row = 0; row < grid_height; row++) {
-            //     let row_no = row * tile_size;
-            //     for (let col = 0; col < grid_width; col++) {
-            //         let col_val = col * tile_size;
-            //         let cell = board.read_cell(row, col);
-            //         console.log(row + " " + col);
-            //         console.log(cell);
-            //         graphicalContext.strokeStyle = cell.color;
-            //         graphicalContext.strokeRect(row_no, col_val, tile_size, tile_size);
-            //     }
-            // }
-
-            /*
-            let geometry = [
-            new Point2D(100, 50),
-            new Point2D(100, 75),
-            new Point2D(75, 75)];
-
-            let pos = new Point2D(75,50);
-
-            let poly = new Polygon(pos, geometry);
-
-
-            graphicalContext.beginPath();
-
-            poly.draw(graphicalContext);
-
-            graphicalContext.closePath();
-
-            graphicalContext.stroke();
-            */
-
-
-
-
-
+            
 
         };
 
