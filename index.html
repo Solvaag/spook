@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Goof Starter</title>
+    <style>
+        #container { position: relative; }
+        .canvas { position: absolute; top: 0; left: 0; }
+    </style>
     <script type="text/javascript" src="classes/render/draw.js"></script>
     <script type="text/javascript" src="classes/game/board.js"></script>
     <script type="text/javascript" src="classes/render/images.js"></script>
@@ -10,7 +14,7 @@
 
         function main () {
 
-            const canvas = document.getElementById('testCanvas');
+            const canvas = document.getElementById('background');
             const graphicalContext = canvas.getContext('2d');
 
             let origin = new Point2D(0,0);
@@ -80,16 +84,25 @@
 
             let all_done = false;
             let resource_list = [tile];
-            
+
+            const canvas1 = document.getElementById('foreground');
+            const graphicalContext1 = canvas1.getContext('2d');
+
+            graphicalContext1.strokeRect(50,50,50,50);
 
         };
 
     </script>
 </head>
 <body onload="main()">
-    <h1>Doof Doof</h1>
-    <canvas  width = "512" height="448" id="testCanvas"  style="border:black 1px solid;">
-        Your browser does not support HTML5 Canvas. Please shift to another browser.
-    </canvas>
+    <div id="container">
+        <canvas class="canvas"  width = "512" height="448" id="background"  style="border:black 1px solid;">
+            Your browser does not support HTML5 Canvas. Please shift to another browser.
+        </canvas>
+        <canvas class="canvas"  width = "512" height="448" id="foreground"  style="border:black 1px solid;">
+            Your browser does not support HTML5 Canvas. Please shift to another browser.
+        </canvas>
+    </div>
+
 </body>
 </html>

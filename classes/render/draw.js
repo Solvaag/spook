@@ -91,6 +91,11 @@ class Point2D {
     get position() {
         return {x:this.x, y:this.y};
     }
+
+    merge(point) {
+        this.x += point.x;
+        this.y += point.y;
+    }
 }
 
 class Point3D extends Point2D {
