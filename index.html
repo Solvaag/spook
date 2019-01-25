@@ -10,6 +10,7 @@
     <script type="text/javascript" src="classes/render/draw.js"></script>
     <script type="text/javascript" src="classes/game/board.js"></script>
     <script type="text/javascript" src="classes/render/images.js"></script>
+    <script type="text/javascript" src="classes/render/animate.js"></script>
     <script>
 
         function main () {
@@ -45,6 +46,7 @@
             // let loader = new Map();
 
             let sand_tile_path = 'https://i.imgur.com/i5sW9TX.png';
+            let wind_trap_path = 'res/windtrap.bmp';
             let doof = "lol";
 
             const loader = new ImageManager(doof);
@@ -75,6 +77,7 @@
             };
 
             loader.load_image("tile", sand_tile_path, callback);
+            loader.load_image("wind_trap", wind_trap_path, callback);
 
             console.log(loader.all_done());
             console.log(loader.loaded_count);
@@ -88,7 +91,33 @@
             const canvas1 = document.getElementById('foreground');
             const graphicalContext1 = canvas1.getContext('2d');
 
-            graphicalContext1.strokeRect(50,50,50,50);
+            // graphicalContext1.strokeRect(50,50,50,50);
+
+            let point = new Point2D(32,32);
+
+            let anim_trap = new AnimatedImage(loader.images.get('wind_trap'), 1, 8, 32, point);
+
+            anim_trap.frame_rate = 3;
+
+            console.log(anim_trap);
+
+            let frame_rate = 1000 / 24;
+
+            const animate = function() {
+
+                graphicalContext1.clearRect(0,0, canvas1.width, canvas1.height); // width = "512" height="448"
+
+                anim_trap.draw(graphicalContext1);
+
+            };
+
+            setInterval(animate, frame_rate);
+
+
+
+
+
+
 
         };
 

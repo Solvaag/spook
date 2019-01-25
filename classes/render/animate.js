@@ -8,9 +8,12 @@ class AnimatedImage {
         this.position = position;
         this.sub_images = this.split_image();
         this.index = 0;
+        this.update_rate = 1;
+        this.frame = 0;
     }
 
     split_image() {
+        console.log("I happened!");
         let sequence = [];
 
         for (let row = 0; row < this.frame_rows; row++) {
@@ -19,8 +22,9 @@ class AnimatedImage {
                 let sy = row * this.tile_size;
                 let s_width = this.tile_size;
                 let s_height = this.tile_size;
-                let splice = new ImageSplice(sx, sy, s_width, s_height, this.position.x, this.position.y, this.tile_size, this.tile_size);
-                sequence.push(splice)
+                const splice = new ImageSplice(sx, sy, s_width, s_height, this.position.x, this.position.y, this.tile_size, this.tile_size);
+                sequence.push(splice);
+                console.log(splice)
             }
         }
 
@@ -29,22 +33,32 @@ class AnimatedImage {
     }
 
     next() {
-        this.index = (this.index + 1)  % this.sub_images.length;
+
+        this.frame = (this.frame + 1) % this.update_rate;
+
+
+        if (this.frame === 0) {
+            this.index = (this.index + 1)  % this.sub_images.length;
+        }
+
     }
 
     move(point2d) {
         this.position.merge(point2d);
-
-        for (let splice of this.sub_images) {
-            splice.delta_x = this.position.x;
-            splice.delta_y = this.position.y;
-        }
     }
 
     draw(context) {
         let pointer = this.index;
         let i = this.sub_images[pointer];
-        context.drawImage(this.image, i.sx, i.sy, i.s_width, i.s_height, i.delta_x, i.delta_y, i.delta_width, i.delta_height);
+
+        context.drawImage(this.image, i.sx, i.sy, i.s_width, i.s_height, this.position.x, this.position.y, i.delta_width, i.delta_height);
+        this.next();
+    }
+
+    set frame_rate(input) {
+        if (input > 0) {
+            this.update_rate = input;
+        }
     }
 
 }
