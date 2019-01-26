@@ -47,6 +47,7 @@
 
             let sand_tile_path = 'https://i.imgur.com/i5sW9TX.png';
             let wind_trap_path = 'res/windtrap.bmp';
+            let macro_path = 'res/bigone_har.bmp';
             let doof = "lol";
 
             const loader = new ImageManager(doof);
@@ -78,6 +79,7 @@
 
             loader.load_image("tile", sand_tile_path, callback);
             loader.load_image("wind_trap", wind_trap_path, callback);
+            loader.load_image("macro", macro_path, callback);
 
             console.log(loader.all_done());
             console.log(loader.loaded_count);
@@ -97,9 +99,13 @@
 
             let anim_trap = new AnimatedImage(loader.images.get('wind_trap'), 1, 8, 32, point);
 
+            let sprites = new SpriteSheet(loader.images.get('macro'), 20, 16, 16);
+
+            let position = new Point2D(100, 100);
+
             anim_trap.frame_rate = 3;
 
-            console.log(anim_trap);
+            console.log(sprites);
 
             let frame_rate = 1000 / 24;
 
@@ -109,17 +115,13 @@
 
                 anim_trap.draw(graphicalContext1);
 
+                sprites.draw(250, position, graphicalContext1);
+
             };
 
             setInterval(animate, frame_rate);
 
-
-
-
-
-
-
-        };
+        }
 
     </script>
 </head>
